@@ -1,1 +1,393 @@
+/* Base theme */
+:root {
+  --kaddora-page: #f6f8fb;
+  --kaddora-card: #ffffff;
+  --kaddora-card-soft: #f9fbfd;
+  --kaddora-line: #dfe5ee;
+  --kaddora-line-soft: #edf1f6;
+  --kaddora-text: #182234;
+  --kaddora-muted: #6b7484;
+  --kaddora-green: #0f6b5d;
+  --kaddora-green-dark: #0a5147;
+  --kaddora-blue: #2f63c7;
+  --kaddora-gold: #b9821c;
+  --kaddora-red: #b42318;
+  --kaddora-shadow: 0 10px 24px rgba(24, 34, 52, 0.07);
+}
 
+.kaddora-admin-page {
+  color: var(--kaddora-text);
+  margin: 24px 24px 0 4px;
+  max-width: 1280px;
+}
+
+.kaddora-admin-page *,
+.kaddora-admin-page *::before,
+.kaddora-admin-page *::after {
+  box-sizing: border-box;
+}
+
+/* Page heading */
+.kaddora-admin-header {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.96), rgba(241,247,246,0.96)),
+    linear-gradient(90deg, rgba(15,107,93,0.12), rgba(185,130,28,0.08));
+  border: 1px solid var(--kaddora-line-soft);
+  border-left: 4px solid var(--kaddora-green);
+  border-radius: 8px;
+  box-shadow: var(--kaddora-shadow);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 18px;
+  min-height: 102px;
+  padding: 24px 28px;
+}
+
+.kaddora-admin-header h1 {
+  color: var(--kaddora-text);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 4px 0 0;
+  padding: 0;
+}
+
+.kaddora-eyebrow {
+  color: var(--kaddora-gold);
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* Main layout */
+.kaddora-admin-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(280px, 390px) minmax(0, 1fr);
+}
+
+.kaddora-panel {
+  background: var(--kaddora-card);
+  border: 1px solid var(--kaddora-line-soft);
+  border-radius: 8px;
+  box-shadow: 0 7px 18px rgba(24, 34, 52, 0.055);
+  margin: 0 0 18px;
+  padding: 22px;
+}
+
+.kaddora-panel h2 {
+  color: var(--kaddora-text);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 16px;
+}
+
+.kaddora-panel p {
+  color: var(--kaddora-muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Forms */
+.kaddora-form-table {
+  margin: 0;
+}
+
+.kaddora-form-table th {
+  color: var(--kaddora-text);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 0 8px;
+  width: 120px;
+}
+
+.kaddora-form-table td {
+  padding: 8px 0;
+}
+
+.kaddora-form input[type="text"],
+.kaddora-form input[type="email"],
+.kaddora-form input[type="number"],
+.kaddora-form select,
+.kaddora-form textarea,
+.kaddora-form-table input[type="text"],
+.kaddora-form-table input[type="email"],
+.kaddora-form-table input[type="number"],
+.kaddora-form-table select,
+.kaddora-form-table textarea {
+  background: #ffffff;
+  border: 1px solid var(--kaddora-line);
+  border-radius: 6px;
+  box-shadow: none;
+  color: var(--kaddora-text);
+  font-size: 14px;
+  min-height: 38px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.kaddora-form textarea,
+.kaddora-form-table textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.kaddora-form input:focus,
+.kaddora-form select:focus,
+.kaddora-form textarea:focus,
+.kaddora-form-table input:focus,
+.kaddora-form-table select:focus,
+.kaddora-form-table textarea:focus {
+  border-color: var(--kaddora-green);
+  box-shadow: 0 0 0 2px rgba(15, 107, 93, 0.14);
+  outline: none;
+}
+
+.kaddora-form-actions {
+  border-top: 1px solid var(--kaddora-line-soft);
+  margin: 16px 0 0;
+  padding-top: 16px;
+}
+
+/* Buttons */
+.kaddora-button-primary,
+.wp-core-ui .kaddora-button-primary {
+  background: var(--kaddora-green);
+  border-color: var(--kaddora-green);
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.kaddora-button-primary:hover,
+.kaddora-button-primary:focus,
+.wp-core-ui .kaddora-button-primary:hover,
+.wp-core-ui .kaddora-button-primary:focus {
+  background: var(--kaddora-green-dark);
+  border-color: var(--kaddora-green-dark);
+  color: #ffffff;
+}
+
+.kaddora-button-secondary,
+.wp-core-ui .kaddora-button-secondary {
+  background: #fffaf0;
+  border-color: #e5c37a;
+  border-radius: 6px;
+  color: #6f4b0f;
+  font-weight: 700;
+}
+
+.kaddora-button-secondary:hover,
+.wp-core-ui .kaddora-button-secondary:hover {
+  background: #fff3d6;
+  border-color: var(--kaddora-gold);
+  color: #573a0b;
+}
+
+.kaddora-toolbar-panel {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kaddora-inline-form {
+  display: inline-flex;
+  margin: 0;
+}
+
+/* Tables */
+.kaddora-table {
+  border: 1px solid var(--kaddora-line-soft);
+  border-radius: 8px;
+  border-spacing: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.kaddora-table thead th {
+  background: #f7f9fc;
+  border-bottom: 1px solid var(--kaddora-line-soft);
+  color: #657184;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 12px 14px;
+  text-transform: uppercase;
+}
+
+.kaddora-table tbody td {
+  border-bottom: 1px solid var(--kaddora-line-soft);
+  color: var(--kaddora-text);
+  font-size: 14px;
+  padding: 13px 14px;
+  vertical-align: middle;
+}
+
+.kaddora-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.kaddora-table.striped > tbody > :nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.kaddora-table.striped > tbody > :nth-child(even) {
+  background-color: #fbfcff;
+}
+
+.kaddora-table tbody tr:hover td {
+  background: #f6faf9;
+}
+
+.kaddora-row-actions a {
+  color: var(--kaddora-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.kaddora-row-actions a:hover {
+  color: var(--kaddora-green);
+}
+
+.kaddora-empty-state {
+  color: var(--kaddora-muted);
+  font-weight: 600;
+  padding: 28px 14px;
+  text-align: center;
+}
+
+/* Dashboard cards */
+.kaddora-stat-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(5, minmax(160px, 1fr));
+}
+
+.kaddora-stat-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+  border: 1px solid var(--kaddora-line-soft);
+  border-radius: 8px;
+  box-shadow: 0 7px 18px rgba(24, 34, 52, 0.055);
+  min-height: 132px;
+  padding: 20px;
+  position: relative;
+}
+
+.kaddora-stat-card::before {
+  background: var(--kaddora-green);
+  border-radius: 8px 8px 0 0;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.kaddora-stat-card h2 {
+  color: var(--kaddora-muted);
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.kaddora-stat-card p {
+  color: var(--kaddora-text);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.kaddora-stat-card-success::before {
+  background: var(--kaddora-green);
+}
+
+.kaddora-stat-card-success p {
+  color: var(--kaddora-green);
+}
+
+.kaddora-stat-card-warning::before {
+  background: var(--kaddora-gold);
+}
+
+.kaddora-stat-card-warning p {
+  color: var(--kaddora-gold);
+}
+
+/* Small details */
+.kaddora-settings-panel,
+.kaddora-empty-panel {
+  max-width: 760px;
+}
+
+.kaddora-plan-pill,
+.kaddora-pro-badge {
+  background: #fff8e8;
+  border: 1px solid #ecc46f;
+  border-radius: 999px;
+  color: #7a510f;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 7px 10px;
+}
+
+.kaddora-admin-page .notice {
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(24, 34, 52, 0.055);
+  margin: 0 0 16px;
+}
+
+/* Responsive */
+@media (max-width: 1180px) {
+  .kaddora-admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kaddora-stat-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 782px) {
+  .kaddora-admin-page {
+    margin-right: 12px;
+  }
+
+  .kaddora-admin-header {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .kaddora-admin-header h1 {
+    font-size: 24px;
+  }
+
+  .kaddora-panel {
+    padding: 18px;
+  }
+
+  .kaddora-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kaddora-form-table th,
+  .kaddora-form-table td {
+    display: block;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .kaddora-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
